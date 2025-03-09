@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: spark_tts_gradio
     runtime: nvidia
-    network_mode: "host"
+#    network_mode: "host"
     stdin_open: true
     tty: true
     command: ["python3", "webui.py", "--server_port", "7310"]
@@ -15,8 +15,8 @@ services:
       - NVIDIA_VISIBLE_DEVICES=0
       - GRADIO_SHARE=False
       - PORT=7310
-    restart: always
+#    restart: always
     ports:
-      - "7860:7860"
+      - "7310:7310"
     volumes:
       - C:/dockerdata/spark-tts:/data:rw
