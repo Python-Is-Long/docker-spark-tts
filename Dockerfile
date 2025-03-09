@@ -25,7 +25,7 @@ EXPOSE 7310
 COPY .env .env
 
 # Copy src directory to the container
-COPY src/ src/
+#COPY src/ src/
 
 # Set PYTHONPATH
 ENV PYTHONPATH=/Spark-TTS

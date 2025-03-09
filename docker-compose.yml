@@ -16,5 +16,7 @@ services:
       - GRADIO_SHARE=False
       - PORT=7310
     restart: always
+    ports:
+      - "7860:7860"
     volumes:
-      - D:/dockerdata/spark-tts:/data:rw
+      - C:/dockerdata/spark-tts:/data:rw
